@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern Cove — Spot the Difference</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="hud">
+  <h1>Lantern Cove</h1>
+  <p id="level-name">Dusk Cove</p>
+  <p id="counter">Found 0 of 8 · 8 to go</p>
+  <p id="clock">0:00</p>
+  <p id="misses">Misses: 0</p>
+  <nav id="controls">
+    <button id="hint-btn" type="button">Hint (H)</button>
+    <button id="restart-btn" type="button">Restart (R)</button>
+    <button class="level-btn" data-level="0" type="button">1 · Dusk</button>
+    <button class="level-btn" data-level="1" type="button">2 · Lanterns</button>
+    <button class="level-btn" data-level="2" type="button">3 · Night</button>
+  </nav>
+</header>
+<main id="stage">
+  <figure class="panel-wrap">
+    <canvas id="panel-left" width="480" height="360"></canvas>
+    <figcaption>The cove as it was</figcaption>
+  </figure>
+  <figure class="panel-wrap">
+    <canvas id="panel-right" width="480" height="360"></canvas>
+    <figcaption>The cove as it is — click a difference</figcaption>
+  </figure>
+</main>
+<p id="toast" role="status"></p>
+<div id="win-banner" hidden>
+  <h2>Every difference found!</h2>
+  <p id="win-stats"></p>
+  <button id="next-btn" type="button">Next level</button>
+</div>
+<script type="module" src="js/game.js"></script>
+</body>
+</html>
